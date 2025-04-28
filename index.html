@@ -4,6 +4,7 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <title>Ulife - Painel do Aluno</title>
+    <link rel="stylesheet" href="style.css" />
 
     <!-- Bootstrap CSS -->
     <link
@@ -16,188 +17,6 @@
       href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css"
       rel="stylesheet"
     />
-
-    <style>
-      header {
-        background-color: rgb(255, 255, 255);
-        padding: 5px;
-        height: 65px;
-        overflow: hidden;
-        position: relative; /* ou absolute/fixed, dependendo do comportamento desejado */
-        z-index: 10; /* Valor maior que o z-index do sidebar */
-      }
-      header nav {
-        display: flex;
-        position: relative; /* ou absolute/fixed, dependendo do comportamento desejado */
-        z-index: 10; /* Valor maior que o z-index do sidebar */
-        justify-content: space-between;
-      }
-
-      .logo {
-        margin-left: 10px;
-        margin-top: 10px;
-      }
-
-      .logoroxo {
-        display: flex;
-        margin-left: 10%;
-      }
-
-      .background {
-        position: absolute;
-        margin-left: 19%;
-        width: 30px;
-        height: 30px;
-        top: -150px;
-        left: 0;
-        z-index: -1; /* Coloca a imagem atrás do conteúdo */
-      }
-      body {
-        background-color: #f4f5f7;
-        font-family: Arial, sans-serif;
-      }
-      .sidebar {
-        width: 60px;
-        background-color: #fff;
-        height: 100vh;
-        position: fixed;
-        top: 0;
-        left: 0;
-        border-right: 1px solid #ddd;
-        padding-top: 60px;
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-      }
-      .sidebar i {
-        font-size: 24px;
-        margin: 30px 0;
-        color: #333;
-        cursor: pointer;
-        z-index: 1;
-      }
-      .content {
-        margin-left: 80px;
-        padding: 30px;
-      }
-      .progress-bar {
-        background-color: #00a39d;
-      }
-      .card-uc {
-        background: #fff;
-        border-radius: 12px;
-        padding: 20px;
-        margin-top: 20px;
-        box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
-      }
-      .top-header {
-        margin-bottom: 30px;
-      }
-      .badge-custom {
-        background-color: #f1f1f1;
-        color: #333;
-        font-size: 14px;
-      }
-      .small-text {
-        font-size: 14px;
-        color: #777;
-      }
-      .material-icons {
-        vertical-align: middle;
-      }
-      .nav-link {
-        padding: 0;
-      }
-
-      button {
-        background-color: #00a39d;
-        color: white;
-        border: none;
-        padding: 10px 20px;
-        border-radius: 5px;
-        cursor: pointer;
-        margin: 10px;
-      }
-      nav button {
-        margin-right: -30%; /* Reduz a margem direita do botão */
-      }
-
-      nav .d-flex i {
-        margin-left: 5px; /* Reduz a margem esquerda dos ícones */
-      }
-
-      nav .d-flex {
-        gap: 5px; /* Controla o espaçamento entre os ícones */
-      }
-
-      nav .d-flex i {
-        font-size: 20px;
-        margin: 10px;
-        color: #303030;
-      }
-
-      .notification-box {
-        display: none; /* Escondida por padrão */
-        position: fixed;
-        top: 67px; /* Ajuste conforme necessário */
-        right: 1px;
-        width: 350px;
-        height: 100%;
-        background-color: white;
-        border: 1px solid #ddd;
-        border-radius: 5px;
-        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-        padding: 15px;
-        z-index: 1000;
-      }
-
-      .notification-box button {
-        width: 280px;
-        height: 45px;
-      }
-
-      .TipoDeNotificacao {
-        display: none; /* Escondida por padrão */
-        position: fixed;
-        top: 230px; /* Ajuste conforme necessário */
-        right: 42px; /* Ajuste conforme necessário */
-        width: 282px;
-        background-color: white;
-        border: 1px solid #ddd;
-        border-radius: 5px;
-        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-        padding: 15px;
-        z-index: 1000;
-      }
-
-
-      .TipoDeNotificacao button {
-        width: 230px; /* largura fixa */
-        height: 50px; /* altura fixa */
-        overflow: hidden; /* esconde se o texto for muito grande */
-        white-space: nowrap; /* impede quebra de linha */
-        text-overflow: ellipsis; /* adiciona "..." se o texto for maior que o botão */
-      }
-
-      .container {
-        margin-left: 20%;
-        
-      }
-      
-      .card {
-        margin-left: 25%;
-        width: 300px;
-      }
-
-      .banner{
-        margin-left: 25%;
-        margin-top: 5%;
-      }
-
-    
-      
-
-    </style>
   </head>
 
   <header>
@@ -223,61 +42,104 @@
       </div>
     </nav>
   </header>
-<div class="caixadenotificacao">
-  <!-- Caixa de notificações -->
-  <div id="notification-box" class="notification-box">
-    <p class="d-flex justify-content-center align-items-center">Notificações</p>
-    <p>filtrar por</p>
-    <button onclick="Notificacoes()">Atividades</button>
+
+  <div class="caixadenotificacao">
+    <!-- Caixa de notificações -->
+    <div id="notification-box" class="notification-box">
+      <p class="d-flex justify-content-center align-items-center">
+        Notificações
+      </p>
+      <p>filtrar por</p>
+      <button onclick="Notificacoes()">Atividades</button>
+      <div id="atividadesLista"></div>
+
+        
+      </div>
+
+    </div>
+    <!-- Tipo Da Notificação -->
+    <div id="TipoDeNotificacao" class="TipoDeNotificacao">
+      <button>Últimas Notificações</button>
+      <button>Academico</button>
+      <button>Atividade</button>
+    </div>
   </div>
-  <!-- Tipo Da Notificação -->
-  <div id="TipoDeNotificacao" class="TipoDeNotificacao" >
-    <button>Últimas Notificações</button>
-    <button>Academico</button>
-    <button>Atividade</button>
-  </div>
-</div>
+
 
   <body>
     <!-- Sidebar -->
     <div class="sidebar">
-      <i class="bi bi-house-door"></i>
+      <i class="bi bi-laptop"></i>
       <i class="bi bi-mortarboard"></i>
       <i class="bi bi-briefcase"></i>
       <i class="bi bi-journals"></i>
-      <i class="bi bi-envelope"></i>
+      <i class="bi bi-envelope" onclick="EnviarNotif()"></i>
+    </div>
+
+
+    <div id="EnviarNotificacao" class="EnviarNotificacao">
+      <h1>Comunicação</h1>
+      <p>Encontre os avisos recebidos e envia mensagens</p>
+
+      <ul class="list-unstyled ">
+        <li>Conectados</li>
+        <li>Avisos</li>
+        <li>Mensagens</li>
+        <li onclick="CadastroNotif()" >Notificações</li>
+        
+      </ul>
+  </div>
+  <form id="meuFormulario" onsubmit="ReceberFormulario(event)">
+    <div id="CadastrarNotificacao" class="CadastrarNotificacao">
+        <h2>Enviar Notificação</h2>
+
+        <input id="nome" type="text" placeholder="Nome/Tempo">
+        <input id="materia" type="text" placeholder="Materia">
+        <input type="datetime-local" id="inicio" name="inicio">
+        <input type="datetime-local" id="fim" name="fim">
+        <input id="resumo" type="text" placeholder="resumo">
+
+        <button type="submit" onclick="mostrarNotificacoes()">Enviar Notificação</button>
+    </div>
+</form>
     </div>
 
     <!-- Conteúdo -->
     <div class="content">
       <!-- Topo -->
-      <div class="top-header d-flex  align-items-center mt-5">
+      <div class="top-header d-flex align-items-center mt-5">
         <div class="container">
           <h4 class="fs-1">Oi, Kaiky, veja seus compromissos</h4>
           <p class="small-text mb-0 mt-5 fs-5">
-            Meus compromissos - Domingo, 27 de abril 
-            <a href="#" class=" text-primary text-decoration-none ms-2"  
+            Meus compromissos - Domingo, 27 de abril
+            <a href="#" class="text-primary text-decoration-none ms-2"
               >• Acessar horário no quadro de aulas</a
             >
           </p>
 
-          <p class="bg-white w-75 p-3 mt-4 br-5 rounded">Você ainda não tem nenhum compromisso pra hoje</p>
+          <p class="bg-white w-75 p-3 mt-4 br-5 rounded">
+            Você ainda não tem nenhum compromisso pra hoje
+          </p>
           <p class="bg-white w-75 p-3 mt-4 br-5 rounded">Atividades</p>
-
-          
         </div>
       </div>
     </div>
 
-    <div id="card" class="card">
-      <div id="card-header" class="card-header"></div>
-      <div id="card-content" class="card-content"></div>
-      <div id="card-tag" class="tag"></div>
+   
+
+    <div id="card" style="display: none;" class="card p-3 shadow-sm">
+      <div id="card-header"  class="card-header bg-primary text-white"></div>
+      <div id="card-content" class="card-body"></div>
+      <div id="card-tag" class="d-inline-flex text-align-end justify-content-end "><span></span></div>
     </div>
 
-    <img class="banner" src="https://ulife-catalogcontent.s3.us-east-1.amazonaws.com/content-cli/Tasting/Img/degustacao-banner.jpg" alt=".jpg">
-    
+    <img
+      class="banner"
+      src="https://ulife-catalogcontent.s3.us-east-1.amazonaws.com/content-cli/Tasting/Img/degustacao-banner.jpg"
+      alt=".jpg"
+    />
 
-    <script src="index.js"></script>
+    <script src="menus.js"></script>
+    <script src="notificacao.js"></script>
   </body>
 </html>

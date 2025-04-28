@@ -1,0 +1,215 @@
+header {
+  background-color: rgb(255, 255, 255);
+  padding: 5px;
+  height: 65px;
+  overflow: hidden;
+  position: relative; 
+  z-index: 10; 
+}
+header nav {
+  display: flex;
+  position: relative; 
+  z-index: 10;
+  justify-content: space-between;
+}
+
+.logo {
+  margin-left: 10px;
+  margin-top: 10px;
+}
+
+.logoroxo {
+  display: flex;
+  margin-left: 10%;
+}
+
+.background {
+  position: absolute;
+  margin-left: 19%;
+  width: 30px;
+  height: 30px;
+  top: -150px;
+  left: 0;
+  z-index: -1; 
+}
+body {
+  background-color: #f4f5f7;
+  font-family: Arial, sans-serif;
+}
+.sidebar {
+  width: 60px;
+  background-color: #fff;
+  height: 100vh;
+  position: fixed;
+  top: 0;
+  left: 0;
+  border-right: 1px solid #ddd;
+  padding-top: 60px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.sidebar i {
+  font-size: 24px;
+  margin: 30px 0;
+  color: #333;
+  cursor: pointer;
+  z-index: 1;
+}
+.content {
+  margin-left: 80px;
+  padding: 30px;
+}
+.progress-bar {
+  background-color: #00a39d;
+}
+.card-uc {
+  background: #fff;
+  border-radius: 12px;
+  padding: 20px;
+  margin-top: 20px;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+}
+.top-header {
+  margin-bottom: 30px;
+}
+.badge-custom {
+  background-color: #f1f1f1;
+  color: #333;
+  font-size: 14px;
+}
+.small-text {
+  font-size: 14px;
+  color: #777;
+}
+.material-icons {
+  vertical-align: middle;
+}
+.nav-link {
+  padding: 0;
+}
+
+button {
+  background-color: #00a39d;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 5px;
+  cursor: pointer;
+  margin: 10px;
+}
+nav button {
+  margin-right: -30%; 
+}
+
+nav .d-flex i {
+  margin-left: 5px; 
+}
+
+nav .d-flex {
+  gap: 5px; 
+}
+
+nav .d-flex i {
+  font-size: 20px;
+  margin: 10px;
+  color: #303030;
+}
+
+.notification-box {
+  display: none; 
+  position: fixed;
+  top: 67px; 
+  right: 1px;
+  width: 350px;
+  height: 100%;
+  background-color: white;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  padding: 15px;
+  z-index: 1000;
+}
+
+.notification-box button {
+  width: 280px;
+  height: 45px;
+}
+
+.TipoDeNotificacao {
+  display: none; 
+  position: fixed;
+  top: 230px; 
+  right: 42px; 
+  width: 282px;
+  background-color: white;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  padding: 15px;
+  z-index: 1000;
+}
+
+.TipoDeNotificacao button {
+  width: 230px;
+  height: 50px; 
+  overflow: hidden; 
+  white-space: nowrap; 
+  text-overflow: ellipsis;
+}
+
+.container {
+  margin-left: 20%;
+}
+
+#card {
+  display: none;
+  margin-left: 25%;
+  width: 300px;
+}
+
+#card-tag {
+  white-space: nowrap;
+  border-radius: 5px 0px 0px 5px;
+  background-color: #ebdfec;
+  font-size: 12px;
+  margin-bottom: 5px;
+}
+
+.banner {
+  margin-left: 25%;
+  margin-top: 5%;
+}
+
+.EnviarNotificacao {
+  display: none; /* Escondida por padrão */
+  position: fixed;
+  left: 60px; /* Ajuste conforme necessário */
+  height: 100vh;
+  width: 282px;
+  background-color: white;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  padding: 15px;
+  z-index: 1000;
+}
+
+.EnviarNotificacao li {
+  margin-bottom: 30px;
+  cursor: pointer;
+}
+
+.CadastrarNotificacao {
+  display: none; /* Escondida por padrão */
+  position: fixed;
+  left: 60px; /* Ajuste conforme necessário */
+  height: 100vh;
+  width: 282px;
+  background-color: white;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  padding: 15px;
+  z-index: 1000;
+}

@@ -21,20 +21,23 @@
         }
   }
 
+  function EnviarNotif () {
+    const enviar = document.getElementById("EnviarNotificacao");
+        if (enviar.style.display === "none" || enviar.style.display === "") {
+            enviar.style.display = "block";
+        }else {
+            enviar.style.display = "none";
+        }
+  }
 
-  // Dados que você quer preencher
-const atividade = {
-    titulo: "Envio de experiência 1 - até 30/04",
-    descricao: "Sistemas distribuídos e mobile",
-    inicio: "16/04/2025 às 00:00",
-    tipo: "Atividade Dissertativa"
-  };
+
   
-  // Preenche os elementos do card
-  document.getElementById('card-header').innerText = atividade.titulo;
-  document.getElementById('card-content').innerHTML = `
-    ${atividade.descricao}<br>
-    Início: ${atividade.inicio}
-  `;
-  document.getElementById('card-tag').innerText = atividade.tipo;
-  
+  function CadastroNotif () {
+    const cadastro = document.getElementById("CadastrarNotificacao");
+        if (cadastro.style.display === "none" || cadastro.style.display === "") {
+            cadastro.style.display = "block";
+        }else {
+            cadastro.style.display = "none";
+        }
+  }
+
