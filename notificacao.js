@@ -43,7 +43,7 @@ function adicionarAtividade(nome, materia, inicio, fim, resumo) {
       <hr>
   `;
 
-  // Adiciona no início da lista (notificações mais recentes primeiro)
+  
   lista.prepend(novaAtividade);
 }
 
@@ -57,7 +57,6 @@ function indicarChegou(fim) {
   }
 }
 
-// Opcional: Verificar a cada 30s se evento acabou
 let intervalo = setInterval(() => {
-  // Coloque aqui se quiser checar eventos automaticamente
-}, 30000);
+  
+}, 30 * 1000);
